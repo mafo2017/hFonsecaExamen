@@ -87,12 +87,12 @@ public partial class Registro : ContentPage
         string xNombre = txtNombre.Text;
         string xApellido = txtApellido.Text;
         string xEdad = txtEdad.Text;
-
+          
         string xCiudad = pkCiudades.ToString();
         string xPaís = pkPaises.ToString();
         string xMontoInicial = txtMontoInicial.Text;
         
-        Navigation.PushAsync(new Views.Resumen(usuario_global));
+        Navigation.PushAsync(new Views.Resumen(usuario_global, xNombre, xApellido, xEdad, xFecha, xCiudad, xPaís, xMontoInicial,xPagomensual, xPagoTotal));
 
     }
 }
