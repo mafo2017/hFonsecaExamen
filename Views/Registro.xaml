@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hFonsecaExamen.Views.Registro"
+             Title="Registro">
+    <VerticalStackLayout
+                Spacing="25"
+                Padding="25"
+        Background="White"
+                >
+
+ 
+        <Label 
+            Text="REGISTRO"
+            TextColor="Black"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label 
+               Text="FECHA"
+               TextColor="Black"
+               FontSize="20"
+               HorizontalOptions="Center" 
+               Grid.Row="0"
+               Grid.Column="0"
+           />
+
+            <DatePicker x:Name="dpFecha" 
+                    Date="06/12/2024" 
+                    Format="MM/dd/yyyy"
+                    DateSelected="dpFecha_DateSelected"
+                        TextColor="Black"
+                    Grid.Row="0"
+                    Grid.Column="1"
+             />
+
+            <Label 
+                   Text="PAIS"
+                   TextColor="Black"
+                   FontSize="20"
+                   HorizontalOptions="Center" 
+                   Grid.Row="1"
+                   Grid.Column="0"
+           />
+
+
+            <Picker x:Name="pkPaises"
+                Title="PAISES"
+                SelectedIndexChanged="pkPaises_SelectedIndexChanged"
+                Grid.Row="1"
+                Grid.Column="1"
+                    TextColor="Black">
+                <Picker.Items>
+                    <x:String >Ecuador</x:String>
+                    <x:String >Colombia</x:String>
+                    <x:String >Perú</x:String>
+                    <x:String >Argentina</x:String>
+                </Picker.Items>
+   
+            </Picker>
+            
+            <Label 
+                   Text="CIUDAD"
+                   TextColor="Black"
+                   FontSize="20"
+                   HorizontalOptions="Center" 
+                   Grid.Row="2"
+                   Grid.Column="0"
+           />
+
+            <Picker x:Name="pkCiudades"
+                Title="CIUDADES"
+                   SelectedIndexChanged="pkCiudades_SelectedIndexChanged"
+                 Grid.Row="2"
+                Grid.Column="1"
+                    TextColor="Black">
+                <Picker.Items>
+                    <x:String >Quito</x:String>
+                    <x:String >Guayaquil</x:String>
+                    <x:String >Cuenca</x:String>
+                    <x:String >Trujillo</x:String>
+                    <x:String >Bogotá</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <Label 
+                   Text="Monto Inicial"
+                   TextColor="Black"
+                   FontSize="20"
+                   HorizontalOptions="Center" 
+                   Grid.Row="3"
+                   Grid.Column="0"
+           />
+
+            <Entry  x:Name="txtMontoInicial"
+                    Placeholder="Ingrese el monto inicial"
+                   TextColor="Black"
+                    Keyboard="Numeric"
+                    MaxLength="4"
+                   Grid.Row="3"
+                   Grid.Column="1"
+           />
+            <Button x:Name="btnCalcularPagoMensual"
+                    Text="Calculo Pago Incial"
+                    Clicked="btnCalcularPagoMensual_Clicked"
+                    Grid.Row="4"
+                    Grid.Column="0"
+            />
+
+            <Entry  x:Name="txtCalcularPagoMensual"
+                   TextColor="Black"
+                   Grid.Row="4"
+                   Grid.Column="1"
+           />
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>
