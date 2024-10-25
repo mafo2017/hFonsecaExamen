@@ -44,7 +44,7 @@ public partial class Login : ContentPage
         if (autorizado)
         {
             // Navegar a la pantalla de Registro
-            Navigation.PushAsync(new Views.Registro());
+            Navigation.PushAsync(new Views.Registro(usuario));
         }
         else
         {
